@@ -3,6 +3,7 @@ var mongoose = require("mongoose");
 var bcrypt = require("bcryptjs");
 var Schema = mongoose.Schema;
 
+
 //model
 var userSchema = new Schema(
   {
@@ -59,6 +60,13 @@ var userSchema = new Schema(
     isEmployed: {
       type: Boolean,
       default: false
+    },
+    isAdmin: {
+      type: Boolean,
+      default: false
+    },
+    image: {
+      type: String
     }
   },
   { timestamps: true }
@@ -73,11 +81,10 @@ userSchema.pre("save", async function(next) {
   next();
 });
 
-
 //verfiy pw
-userSchema.methods.verifyPassword = async function (password) {
-  return await bcrypt.compare(password, this.password)
-}
+userSchema.methods.verifyPassword = async function(password) {
+  return await bcrypt.compare(password, this.password);
+};
 
 //export
 module.exports = mongoose.model("User", userSchema);

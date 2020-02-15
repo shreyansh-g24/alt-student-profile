@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 
 module.exports = {
   generateJWT: async user => {
@@ -20,5 +21,9 @@ module.exports = {
     } else {
       res.json({ msg: "Token required" });
     }
+  },
+  updatePW: user => {
+    var hash = bcrypt.hashSync(user.password, 10);
+    user.password = hash;
   }
 };
