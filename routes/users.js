@@ -3,11 +3,8 @@ var router = express.Router();
 var User = require("../models/users");
 var auth = require("../modules/auth");
 var jwt = require("jsonwebtoken");
-
-/* GET users listing. */
-// router.get("/", function(req, res, next) {
-//   res.send("respond with a resource");
-// });
+var bcrypt = require("bcryptjs");
+var updatePW = auth.updatePW;
 
 //create user
 router.post("/register", async (req, res) => {
@@ -49,11 +46,38 @@ router.get("/", async (req, res) => {
   }
 });
 
+//view individual user/profile
+router.get("/profile", auth.verifyToken, async (req, res) => {
+  try {
+    var user = await User.findById(req.user.UserId);
+    res.status(200).json({ success: true, user });
+  } catch (error) {
+    res.status(400).json({ msg: "User not found" });
+  }
+});
+
 //update user
-router.put("/update", async (req, res) => {
+router.put("/update", auth.verifyToken, async (req, res) => {
   var UserId = req.user.UserId;
-  var updateduser = await User.findByIdAndUpdate(UserId, req.body)
-  console.log(updateduser)
-})
+  var updateduser = await User.findByIdAndUpdate(
+    UserId,
+    { new: true },
+    req.body
+  );
+  await updatePW(updateduser);
+  res.status(200).json({ success: true, updateduser });
+});
+
+//delete user
+router.delete("/delete", auth.verifyToken, async (req, res) => {
+  console.log(req.user);
+  try {
+    var UserId = req.user.UserId;
+    var updatedUser = await User.findByIdAndDelete(UserId);
+    res.status(200).json({ success: true, msg: "user deleted" });
+  } catch (error) {
+    res.status(400).json({ msg: "user not deleted, please try again" });
+  }
+});
 
 module.exports = router;

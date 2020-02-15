@@ -3,6 +3,7 @@ var mongoose = require("mongoose");
 var bcrypt = require("bcryptjs");
 var Schema = mongoose.Schema;
 
+
 //model
 var userSchema = new Schema(
   {
@@ -61,6 +62,13 @@ var userSchema = new Schema(
     isEmployed: {
       type: Boolean,
       default: false
+    },
+    isAdmin: {
+      type: Boolean,
+      default: false
+    },
+    image: {
+      type: String
     }
   },
   { timestamps: true }

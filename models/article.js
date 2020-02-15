@@ -9,9 +9,9 @@ var articleSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "User"
     },
-    title: String,
+    about: String,
     description: String,
-    content: String
+    link: String
   },
   { timestamps: true }
 );
