@@ -44,10 +44,12 @@ var userSchema = new Schema(
       }
     ],
     projects: [String],
-    articles: {
-      type: Schema.Types.ObjectId,
-      ref: "Article"
-    },
+    articles: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Article"
+      }
+    ],
     education: {
       type: [String]
     },
@@ -73,11 +75,10 @@ userSchema.pre("save", async function(next) {
   next();
 });
 
-
 //verfiy pw
-userSchema.methods.verifyPassword = async function (password) {
-  return await bcrypt.compare(password, this.password)
-}
+userSchema.methods.verifyPassword = async function(password) {
+  return await bcrypt.compare(password, this.password);
+};
 
 //export
 module.exports = mongoose.model("User", userSchema);
