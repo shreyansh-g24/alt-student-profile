@@ -10,6 +10,7 @@ var usersRouter = require("./routes/users");
 var articleRouter = require("./routes/article");
 
 var app = express();
+require("dotenv").config();
 //mongoDB connect
 
 mongoose.connect(
