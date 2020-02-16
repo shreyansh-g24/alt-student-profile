@@ -56,5 +56,19 @@ font-weight: 700;
       margin-top: 100px;
   }
   .profile-body{
-      background: url("../media/pic8.jpg");
+      background:url("../media/pic11.png");
+      background-size: cover;
+      background-repeat: no-repeat;     
   }
+.save1 {
+    text-align: center;
+}
+.save1 button:hover{
+    color: black;
+}
+#position1{
+    background-attachment: fixed !important;
+    min-height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
