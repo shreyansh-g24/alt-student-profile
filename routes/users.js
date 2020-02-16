@@ -8,7 +8,7 @@ var updatePW = auth.updatePW;
 
 //create user
 router.post("/register", async (req, res) => {
-  console.log(req.body);
+  console.log(req);
   try {
     var user = await User.create(req.body);
     res.status(200).json({ success: true, user });
