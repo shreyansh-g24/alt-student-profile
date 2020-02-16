@@ -12,6 +12,10 @@
     background-size: cover;
     font-family: 'Acme', sans-serif;
     padding-bottom: 200px;
+
+    /* Anas Changes */
+
+    
     /* background-color: rgb(0,0,0,0.4); */
 }
 .padding_one {
@@ -67,8 +71,19 @@ font-weight: 700;
     color: black;
 }
 #position1{
-    background-attachment: fixed !important;
+    background-image: url("../media/pic13.jpeg");
+    background-attachment:fixed;
     min-height: 500px;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-}
+ } 
+ .admin-body{
+     background: url("../media/pic3.jpg");
+     background-size: cover;
+ }
+ .signup-body {
+     background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../media/pic15.jpeg");
+     background-size: cover;
+     opacity: 0.7;
+ }
