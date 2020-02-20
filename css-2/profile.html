@@ -12,47 +12,88 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/8a0092090f.js" crossorigin="anonymous"></script>
 </head>
-<body class="login-body profile-body">
+<body class="profile-body">
+  <header>
+    <div class="icon">
+      <i class="fas fa-power-off"></i>
+    </div>
+    <div class="container d-flex justify-content-center mt-5">
+      <h4 class="display-5 form-signup-heading" style="color: black;">Developers Profile</h4>
+  </div>
+  </header>
     <main>
-        <section class="container p-5">
-            <div>
+        <section class="container profile_section p-5">
+            <section>
+              <div>
                 <img class="profile-photo" src="assets/media/pic6.jpg" alt="">
-            </div>
-            <section id="position1">
-              <form class="profile-container">
-              <div class="row">
-                <div class="col">
-                  <label for="exampleInputEmail1">Name</label>
-                  <input type="name" class="form-control">
-                </div>
-                <div class="col">
-                  <label for="exampleInputEmail1">Email</label>
-                  <input type="email" class="form-control">
-                </div>
-              </div>  
-            </form>           
-            <div class="form-group profile-container">
-                <label for="exampleInputEmail1">Twitter</label>
-                <input type="link" class="form-control" placeholder="paste the link" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group profile-container">
-              <div class="row">
-                <div class="col">
-                  <label for="exampleInputEmail1">Github</label>
-                  <input type="link" class="form-control" placeholder="paste the link">
-                </div>
-                <div class="col">
-                  <label for="exampleInputEmail1">Linkedin</label>
-                  <input type="link" class="form-control" placeholder="paste the link">
-                </div>
-              </div>  
-            </div>
-            <div class="form-group profile-container">
-              <label for="exampleInputEmail1">Codewars</label>
-              <input type="link" class="form-control" placeholder="paste the link" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group profile-container">
+              </div>
+              <form class="profile-container margin">
+                <div class="row profile_bottom">
+                  <div class="col">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="name" class="form-control">
+                  </div>
+                  <div class="col">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control">
+                  </div>
+                </div> 
+                <div class="row profile_bottom">
+                  <div class="col">
+                    <label for="exampleInputEmail1">Twitter</label>
+                    <input type="link" class="form-control" placeholder="Paste the link">
+                  </div>
+                  <div class="col">
+                    <label for="exampleInputEmail1">Github</label>
+                    <input type="link" class="form-control" placeholder="Paste the link">
+                  </div>
+                </div> 
+                <div class="row profile_bottom">
+                  <div class="col">
+                    <label for="exampleInputEmail1">LinkedIn</label>
+                    <input type="link" class="form-control" placeholder="Paste the link">
+                  </div>
+                  <div class="col">
+                    <label for="exampleInputEmail1">Codewars</label>
+                    <input type="link" class="form-control" placeholder="Paste the link">
+                  </div>
+                </div> 
+                <div class="row profile_bottom">
+                  <div class="col">
+                    <label for="exampleInputEmail1">Date of Birth</label>
+                    <input type="date" class="form-control" placeholder="DD/MM/YY">
+                  </div>
+                  <div class="col">
+                    <label for="exampleInputEmail1">Article</label>
+                    <input type="link" class="form-control" placeholder="Paste the link">
+                  </div>
+                </div> 
+                <div class="row">
+                  <div class="form-group col">
+                    <label for="exampleFormControlSelect1">Education</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>/*select*/</option>
+                      <option>B.tech</option>
+                      <option>m.tech</option>
+                      <option>Degree</option>
+                      <option>Intermediate(+2)</option>
+                      <option>Post Graduate</option>
+                      <option>Graduate</option>
+                      <option>Diploma</option>
+                    </select>
+                  </div>
+                  <div class="form-group col">
+                    <label for="exampleFormControlSelect1">Is Employed</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Yes</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+                </div>  
+            <div class="form-group profile-container profile_bottom">
               <label for="exampleInputPassword1">About Me</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
@@ -64,32 +105,25 @@
               <label for="exampleInputPassword1">Projects</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-            <div class="profile-container">
-              <div class="row">
-                <div class="form-group col">
-                  <label for="exampleFormControlSelect1">Education</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>/*select*/</option>
-                    <option>B.tech</option>
-                    <option>m.tech</option>
-                    <option>Degree</option>
-                    <option>Intermediate(+2)</option>
-                    <option>Post Graduate</option>
-                    <option>Graduate</option>
-                    <option>Diploma</option>
-                  </select>
-                </div>
-                <div class="form-group col">
-                  <label for="exampleFormControlSelect1">Is Employed</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>Yes</option>
-                    <option>No</option>
-                  </select>
-                </div>
-              </div>  
+            <div class="form-group profile-container">
+              <label for="exampleInputPassword1">Skills</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
+            </div>
+            <div class="row profile_bottom">
+              <div class="col">
+                <label for="exampleInputEmail1">Image</label>
+                <input type="file" class="form-control">
+              </div>
+              <div class="col">
+                <label for="exampleInputEmail1">password</label>
+                <input type="password" class="form-control">
+              </div>
+            </div> 
             <div class="profile-container save1">
-              <button type="submit" class="btn pl-5 pr-5 third">Save</button>
+              <button type="submit" class="btn pl-5 pr-5 bg-primary">SAVE</button>
+              <button type="submit" class="btn pl-5 pr-5 bg-primary">UPDATE</button>
+
             </div>
            </section>
         </section>

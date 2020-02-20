@@ -36,7 +36,7 @@ font-weight: 700;
     /* border-color: rgb(27, 27, 201); */
     color: #fff;
     box-shadow: 0 0 40px 40px rgb(2, 57, 66) inset, 0 0 0 0 blue;
-    transition: all 1150ms ease-in-out;
+    transition: all 500ms ease-in-out;
     margin-top: 20px;
     /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
   }
@@ -51,18 +51,27 @@ font-weight: 700;
   .profile-container {
       max-width: 540px;
       margin: 0 auto;
+      /* margin-top: 100px; */
+      /* margin-left: 330px; */
+  }
+
+  .margin{
+    margin: 0 auto;
   }
   .profile-photo {
       width: 20vh;
       height: 20vh;
       border-radius: 50%;
       object-fit: cover;
-      margin-top: 100px;
+      /* margin-top: 100px; */
+      margin-left: 50px;
+      position: absolute;
   }
   .profile-body{
-      background:url("../media/pic11.png");
-      background-size: cover;
-      background-repeat: no-repeat;     
+      background:rgba(220,220,220,0.7);
+    
+      /* background-size: cover; */
+      /* background-repeat: no-repeat;      */
   }
 .save1 {
     text-align: center;
@@ -71,7 +80,7 @@ font-weight: 700;
     color: black;
 }
 #position1{
-    background-image: url("../media/pic13.jpeg");
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../media/pic2.jpg");
     background-attachment:fixed;
     min-height: 500px;
     background-position: center;
@@ -87,3 +96,29 @@ font-weight: 700;
      background-size: cover;
      opacity: 0.7;
  }
+ .profile_bottom {
+     padding-bottom: 20px;
+ }
+ .profile_section{
+     padding-top: 200px;
+ }
+ .icon{
+     text-align: right;
+     font-size: 40px;
+     color: red;
+     margin-right: 40px;
+     margin-top: 40px;
+     box-sizing: border-box;
+     /* width: 50px; */
+     /* height: 50px; */
+     /* border-radius: 30px; */
+ }
+ .cross {
+     /* text-align: left; */
+     /* margin-left: 20px; */
+     position: absolute;
+     margin-left: 160px;
+     /* margin-left: 30px; */
+ }
+ 
+ 
